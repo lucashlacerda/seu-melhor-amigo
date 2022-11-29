@@ -1,0 +1,42 @@
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5% 8%;
+    position: sticky;
+    .logo{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span{
+            font-weight: 700;
+            font-size: 1.25em;
+        }
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 25%;
+
+        li{
+            list-style: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        li.nav-button:hover {
+            border-bottom: 3px solid #1F54A4;
+        }
+        li:last-child{
+            background-color: #1F54A4;
+            color: #fff;
+            padding: 1.85% 3%;
+            border-radius: 9px;
+            font-weight: 700;
+        }
+    }
+
+}

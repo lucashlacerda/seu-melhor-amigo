@@ -1,0 +1,16 @@
+h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  color: #0D0539;
+  margin: 0 9%;
+}
+
+h1 span {
+  color: #FEAC01;
+}
+
+p {
+  margin: 0 9%;
+  font-size: .9em;
+}
+/*# sourceMappingURL=title.component.css.map */

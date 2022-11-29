@@ -1,0 +1,40 @@
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5% 6% 1.5% 8%;
+    position: sticky;
+    .logo{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span{
+            font-weight: 700;
+            font-size: 1.25em;
+        }
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        width: 25%;
+        gap: 10%;
+
+        li{
+            list-style: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        li.nav-button:hover {
+            border-bottom: 3px solid #1F54A4;
+        }
+        li.nav-button:nth-child(2){
+            color: #1F54A4;
+            font-weight: 700;
+        }
+        
+    }
+
+}

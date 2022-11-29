@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/components/home/main-content/main-content.component.scss"
+    ],
+    "names": [],
+    "file": "main-content.component.css"
+}

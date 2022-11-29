@@ -1,0 +1,55 @@
+section {
+  margin: 10% 15% 0 9%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section .about {
+  max-width: 50%;
+}
+
+section .about h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+section .about p {
+  font-weight: 500;
+  font-size: .9em;
+}
+
+section .extra-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 50%;
+  margin-left: 15%;
+}
+
+section .extra-content .argument {
+  max-width: 40%;
+  margin: 5%;
+}
+
+section .extra-content .argument h3 {
+  font-weight: 700;
+}
+
+section .extra-content .argument p {
+  font-weight: 500;
+  font-size: .9em;
+}
+/*# sourceMappingURL=about.component.css.map */

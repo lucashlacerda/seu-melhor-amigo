@@ -1,0 +1,41 @@
+section{
+    margin:10% 15% 0 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .about{
+        max-width: 50%;
+        h3{
+            font-size:1.2em;
+            font-weight: 700;
+        }
+        // h3:before{
+        //     content: '';
+        //     border: 2px solid #007DC5;
+        //     position: relative;
+        //     top: -5px;
+        // }
+        p{
+            font-weight: 500;
+            font-size:.9em;
+        }
+    }
+    .extra-content{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-width: 50%;
+        margin-left:15%;
+        .argument{
+            max-width: 40%;
+            margin: 5%;
+            h3{
+                font-weight: 700;
+            }
+            p{
+                font-weight: 500;
+                font-size:.9em;
+            }
+        }
+    }
+}

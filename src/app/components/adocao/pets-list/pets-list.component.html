@@ -1,0 +1,9 @@
+<div class="pets">
+    <div class="pet-preview" *ngFor="let pet of pets">
+    <img src="{{pet.imagePath}}" alt="Pet picture">
+    <div class="pet-informations">
+        <span class="pet-name">{{pet.name}}</span>
+    <span class="pet-location">{{pet.location.cidade}}/{{pet.location.estado}}</span>
+    </div>
+</div>
+</div>

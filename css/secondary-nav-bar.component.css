@@ -1,0 +1,59 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5% 6% 1.5% 8%;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+nav .logo span {
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  gap: 10%;
+}
+
+nav ul li {
+  list-style: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav ul li.nav-button:hover {
+  border-bottom: 3px solid #1F54A4;
+}
+
+nav ul li.nav-button:nth-child(2) {
+  color: #1F54A4;
+  font-weight: 700;
+}
+/*# sourceMappingURL=secondary-nav-bar.component.css.map */
