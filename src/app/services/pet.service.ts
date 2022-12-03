@@ -15,6 +15,6 @@ export class PetService {
   }
 
   addPet(pet: Pet): Observable<string>{
-    return this.http.post<string>(`https://seu-melhor-amigo-11a65-default-rtdb.firebaseio.com/pet/.json`, JSON.stringify(pet));
+    return this.http.post<string>(`https://seu-melhor-amigo-11a65-default-rtdb.firebaseio.com/pet/.json`, pet);
   }
 }

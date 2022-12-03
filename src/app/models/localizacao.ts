@@ -1,7 +1,13 @@
-export interface Localizacao {
-    rua: string;
+export class Localizacao {
+    cep:         string;
+    logradouro:  string;
+    complemento?: string;
+    bairro:      string;
+    localidade:  string;
+    uf:          string;
+    ibge?:        string;
+    gia?:         string;
+    ddd?:         string;
+    siafi?:       string;
     numero: number;
-    bairro: string;
-    cidade: string;
-    estado: string;
 }

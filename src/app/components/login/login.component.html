@@ -1,0 +1,21 @@
+<div class="container">
+    <img class="" src="../../../assets/Rectangle 11.png" alt="A cat">
+    <div class="form">
+        <div class="logo" router-link="home">
+            <img src="../../../../assets/PetLogo 1.png" alt="Company Logo" class="logo">
+            <span>Seu melhor amigo</span>
+        </div>
+        <span class="title">Faça seu Login</span>
+
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <label for="senha">Senha</label>
+            <input id="senha" type="password" >
+
+        </form>
+        <button (click)="logar()">Logar</button>
+        <span class="login-options" routerLink="/cadastro">Não sou cadastrado</span>
+        <span class="login-options">Esqueceu sua senha?</span>
+    </div>
+</div>
