@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Localizacao } from 'src/app/models/localizacao';
-import { User } from 'src/app/models/user';
+import { Pet } from 'src/app/models/pet.model';
+import { PetService } from 'src/app/services/pet.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.scss']
+  selector: 'app-cadastro-pet',
+  templateUrl: './cadastro-pet.component.html',
+  styleUrls: ['./cadastro-pet.component.scss']
 })
-export class CadastroComponent implements OnInit {
-  constructor(private userService: UserService) { }
-  usuario: User = {email: '', localizacao: {localidade: '',bairro: '', cep: '', uf: '', numero: 0, logradouro: ''}, nome: '',senha: ''};
+export class CadastroPetComponent implements OnInit {
+
+  constructor(private petService: PetService, private userService: UserService) { }
+  pet: Pet = {age: 0, id: "", imagePath: "", location: {bairro: "", cep: "", localidade: "", logradouro: "", numero: 0, uf: ""},name: ""};
   
 
   criaNovoUsuario(){
-    
-    
-    let observable = this.userService.addNewUser(this.usuario);
+    let observable = this.petService.addPet(this.pet);
     observable.subscribe(retorno => {
       console.log(retorno);
     })
@@ -24,12 +23,12 @@ export class CadastroComponent implements OnInit {
   }
 
   buscaCep(){
-    let cepAjustado: string = this.removeTracoCep(this.usuario.localizacao.cep);
+    let cepAjustado: string = this.removeTracoCep(this.pet.location.cep);
 
     let observable = this.userService.buscaCep(cepAjustado);
     observable.subscribe(endereco => {
-      this.usuario.localizacao = {
-        ...this.usuario.localizacao,
+      this.pet.location = {
+        ...this.pet.location,
         logradouro: endereco.logradouro,
         bairro: endereco.bairro,
         uf: endereco.uf,
@@ -38,20 +37,20 @@ export class CadastroComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-  }
-
+  
   removeTracoCep(cep: string): string {
     let cepSemTraco: string = '';
     if(cep.split('').indexOf('-') > 0){
       for(let letra of cep.split('')){
         if(letra !== "-"){
-            cepSemTraco += letra;
+          cepSemTraco += letra;
         }
       }
       return cepSemTraco;
     }
     return cep;
+  }
+  ngOnInit(): void {
   }
 }
 

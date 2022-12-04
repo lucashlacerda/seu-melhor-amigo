@@ -1,0 +1,41 @@
+<div class="container">
+    <img class="" src="../../../assets/Rectangle 11.png" alt="A cat">
+    <div class="form">
+        <div class="logo" routerLink="/home">
+            <img src="../../../../assets/PetLogo 1.png" alt="Company Logo" class="logo">
+            <span>Seu melhor amigo</span>
+        </div>
+        <span class="title">Faça seu cadastro</span>
+
+        <form>
+            <label for="nome">Nome</label>
+            <input required [(ngModel)]="pet.name" type="text" id="nome" name="nome">
+
+            <label for="imagePath">Endereço da imagem</label>
+            <input type="text" id="imagePath" name="imagePath" [(ngModel)]="pet.imagePath">
+            
+            <label for="age">Idade</label>
+            <input type="number" id="age" name="age" [(ngModel)]="pet.age">
+
+            <label for="cep">Cep</label>
+            <input required (blur)="buscaCep()" [(ngModel)]="pet.location.cep" name="cep" id="cep" type="text" >
+
+            <label for="rua">Rua</label>
+            <input required [(ngModel)]="pet.location.logradouro" name="rua" id="rua" type="text" >
+
+            <label for="numero">Número</label>
+            <input required id="numero" [(ngModel)]="pet.location.numero" name="bairro"  type="number" >
+
+            <label for="bairro">Bairro</label>
+            <input required id="bairro" [(ngModel)]="pet.location.bairro" name="bairro" type="text">
+
+            <label for="cidade">Cidade</label>
+            <input required id="cidade" [(ngModel)]="pet.location.localidade" name="cidade" type="text">
+            
+            <label for="estado">Estado</label>
+            <input required id="estado" [(ngModel)]="pet.location.uf" name="estado" type="text">
+
+        </form>
+        <button type="submit" (click)="criaNovoUsuario()">Cadastrar</button>
+    </div>
+</div>

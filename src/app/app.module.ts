@@ -17,6 +17,10 @@ import { PetsListComponent } from './components/adocao/pets-list/pets-list.compo
 import { PqAdotarComponent } from './components/adocao/pq-adotar/pq-adotar.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { CadastroPetComponent } from './components/cadastro-pet/cadastro-pet.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +37,15 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
     PqAdotarComponent,
     LoginComponent,
     CadastroComponent,
+    CadastroPetComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]

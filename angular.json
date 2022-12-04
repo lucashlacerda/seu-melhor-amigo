@@ -100,6 +100,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "seu-melhor-amigo:build:production",
+            "firebaseProject": "seu-melhor-amigo-11a65",
+            "firebaseHostingSite": "seu-melhor-amigo-11a65"
+          }
         }
       }
     }

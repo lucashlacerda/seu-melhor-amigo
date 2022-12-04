@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "seu-melhor-amigo-11a65": {
+      "hosting": {
+        "seu-melhor-amigo": [
+          "seu-melhor-amigo-11a65"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "seu-melhor-amigo-11a65"
+  }
+}
