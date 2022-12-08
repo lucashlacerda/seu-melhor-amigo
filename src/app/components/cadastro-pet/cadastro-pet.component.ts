@@ -14,12 +14,13 @@ export class CadastroPetComponent implements OnInit {
   pet: Pet = {age: 0, id: "", imagePath: "", location: {bairro: "", cep: "", localidade: "", logradouro: "", numero: 0, uf: ""},name: ""};
   
 
-  criaNovoUsuario(){
+  criaNovoPet(){
     let observable = this.petService.addPet(this.pet);
     observable.subscribe(retorno => {
       console.log(retorno);
     })
 
+    this.pet = {age: 0, id: "", imagePath: "", location: {bairro: "", cep: "", localidade: "", logradouro: "", numero: 0, uf: ""},name: ""};
   }
 
   buscaCep(){

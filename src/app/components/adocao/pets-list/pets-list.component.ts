@@ -20,7 +20,9 @@ export class PetsListComponent implements OnInit {
       }})
   }
 
-  
+  imprimePet(petDiv){
+    console.log(petDiv);
+  }
   
   ngOnInit(): void {
     this.buscarTodosPets();

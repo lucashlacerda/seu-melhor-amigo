@@ -21,6 +21,7 @@ export class CadastroComponent implements OnInit {
       console.log(retorno);
     })
 
+    this.usuario = {email: '', localizacao: {localidade: '',bairro: '', cep: '', uf: '', numero: 0, logradouro: ''}, nome: '',senha: ''};
   }
 
   buscaCep(){

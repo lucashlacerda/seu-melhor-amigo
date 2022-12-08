@@ -16,6 +16,10 @@ export class UserService {
     return this.http.get<Localizacao>(`https://viacep.com.br/ws/${cep}/json/`);
   }
 
+  buscaUser(): Observable<User[]>{
+    return this.http.get<User[]>('https://seu-melhor-amigo-11a65-default-rtdb.firebaseio.com/user/.json');
+  }
+
   addNewUser(user: User): Observable<string>{
     return this.http.post<string>('https://seu-melhor-amigo-11a65-default-rtdb.firebaseio.com/user/.json', user);
   }
